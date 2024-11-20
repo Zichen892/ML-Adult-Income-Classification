@@ -337,6 +337,8 @@ To evaluate the best performance models, we applied the [receiver operating char
 
 #### Highest AUC score: 
 ![image_30](Images/image_30.png)
+
+As we know, a good fit model is not just to achieve high AUC, we have to consider the computation costs, time complexity, etc. Therefore, we have measured the time complexity versus AUC for all group-implemented models. There is a trade-off between time and average AUC for Neural Networks; this model has a higher AUC but also takes a long time to run because of the complex computation.
  
 #### Best Performance models: 
 |Decision Tree|Neural Network|
