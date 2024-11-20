@@ -116,7 +116,10 @@ Discrete feature:
 $𝑃(𝑦|X_1,...,X_𝑛)\propto\ 𝑙𝑖𝑘𝑒𝑙𝑖h𝑜𝑜𝑑 * 𝑝𝑟𝑖𝑜𝑟 = 𝑃(𝑋_i | 𝑦 = 𝑘) * 𝑃(𝑦 = 𝑘)$
 
 Continuous feature:
-$$𝑃(𝑋|𝑦 = 𝑘) ~ 𝑁(\mu_{ki} , \sigma_{ki}^2), 𝑓(𝑥) = \frac{1}{\sqrt{2 \pie \sigma^2}}* 𝑒^(𝑥_𝑖 − μ_𝑖_𝑗)^2$$
+$$
+P(X|y = k) \sim N(\mu_{ki}, \sigma_{ki}^2), \quad 
+f(x) = \frac{1}{\sqrt{2 \pi \sigma^2}} \cdot e^{-\frac{(x_i - \mu_{ij})^2}{2 \sigma^2}}
+$$
 
 |Model Type|	Data Structure|	AUC |	Accuracy|	F1 Score|	Recall|	Precision|
 |:---|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -138,8 +141,17 @@ $$𝑃(𝑋|𝑦 = 𝑘) ~ 𝑁(\mu_{ki} , \sigma_{ki}^2), 𝑓(𝑥) = \frac{1}
 ### 7.2. Logistic Regression 
 
 The logistic regression model was implemented using an sk-learn model and our code on standard scalar, MinMax scalar, and PCA dataset.
+$$
+\text{cost}(h_\theta (x), y) = 
+\begin{cases} 
+    - \log(h_\theta(x)) & \text{if } y = 1 \\ 
+    - \log(1 - h_\theta(x)) & \text{if } y = 0 
+\end{cases}
+$$
 
-<img width="452" alt="image" src="https://github.com/user-attachments/assets/85a39acb-f7cb-4599-9c93-60096c93b44a">
+$$
+P(y|\theta, x) = \left(\frac{1}{1 + e^{-\theta^Tx}}\right)^y \cdot \left(1 - \frac{1}{1 + e^{-\theta^Tx}}\right)^{1-y}
+$$
 
 For logistic regression, we want to understand the relative importance of each feature in determining the class label. To understand that, we used [SHapley Additive exPlanations(SHAPE)](https://analyticsindiamag.com/a-complete-guide-to-shap-shapley-additive-explanations-for-practitioners/#:~:text=What%20is%20SHAP%3F-,SHAP%20or%20SHAPley%20Additive%20exPlanations%20is%20a%20visualization%20tool%20that,explainable%20by%20visualizing%20its%20output.) values, which provide a way to assign a numerical importance score to each feature.
 
