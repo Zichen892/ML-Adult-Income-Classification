@@ -139,18 +139,7 @@ $$𝑃(𝑋|𝑦 = 𝑘) ~ 𝑁(\mu_{ki} , \sigma_{ki}^2), 𝑓(𝑥) = \frac{1}
 
 The logistic regression model was implemented using an sk-learn model and our code on standard scalar, MinMax scalar, and PCA dataset.
 
-$$
-\text{cost}(h_\theta (x), y) = 
-\begin{cases} 
-    - \log(h_\theta(x)) & \text{if } y = 1 \\ 
-    - \log(1 - h_\theta(x)) & \text{if } y = 0 
-\end{cases}
-$$
-
-$$
-P(y|\theta, x) = \left(\frac{1}{1 + e^{-\theta^Tx}}\right)^y \cdot \left(1 - \frac{1}{1 + e^{-\theta^Tx}}\right)^{1-y}
-$$
-
+<img width="452" alt="image" src="https://github.com/user-attachments/assets/85a39acb-f7cb-4599-9c93-60096c93b44a">
 
 For logistic regression, we want to understand the relative importance of each feature in determining the class label. To understand that, we used [SHapley Additive exPlanations(SHAPE)](https://analyticsindiamag.com/a-complete-guide-to-shap-shapley-additive-explanations-for-practitioners/#:~:text=What%20is%20SHAP%3F-,SHAP%20or%20SHAPley%20Additive%20exPlanations%20is%20a%20visualization%20tool%20that,explainable%20by%20visualizing%20its%20output.) values, which provide a way to assign a numerical importance score to each feature.
 
@@ -233,15 +222,7 @@ The methodology of the decision trees involves recursive partitioning of the dat
 
 We applied the decision trees on our dataset under 4 scenarios, first where all data were categorical, next, we evaluated it on standardized numerical data, normalized numerical data, and lastly on numerical data with PCA.
 
-$$
-P_i = \frac{\text{\#income above 50k or income below 50k}}{\text{Subnotes}}
-$$
-$$
-\text{Entropy} = \sum_{i=1}^n -p(C_i) \log_2(p(C_i))
-$$
-$$
-\text{where } p(C_i) \text{ is the probability of class } C_i \text{ in a node } i
-$$
+<img width="450" alt="image" src="https://github.com/user-attachments/assets/d0eafee1-834e-4843-86be-156d952af0fa">
 
 **[Entropy](https://towardsdatascience.com/decision-trees-explained-entropy-information-gain-gini-index-ccp-pruning-4d78070db36c#:~:text=In%20the%20context%20of%20Decision,only%20pass%20or%20only%20fail.)** denotes the uncertainty of the data, it measures the impurity in a node. When a node contains various classes, it will have a higher entropy than a node that has only one class (PURE). Entropy has a range from 0 to 1. 
 
