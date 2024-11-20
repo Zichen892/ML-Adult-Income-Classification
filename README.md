@@ -140,16 +140,15 @@ $$𝑃(𝑋|𝑦 = 𝑘) ~ 𝑁(\mu_{ki} , \sigma_{ki}^2), 𝑓(𝑥) = \frac{1}
 The logistic regression model was implemented using an sk-learn model and our code on standard scalar, MinMax scalar, and PCA dataset.
 
 $$
-cost(h_\theta (x), y) = \left\{
-    \begin{array}\\
-        - log(h_\theta(x)) & \mbox{if } \ y = 1 \\
-        - log(1 - h_\theta(x)) & \mbox{if } \ y = 0 \\
-    \end{array}
-\right.
-$$ 
+\text{cost}(h_\theta (x), y) = 
+\begin{cases} 
+    - \log(h_\theta(x)) & \text{if } y = 1 \\ 
+    - \log(1 - h_\theta(x)) & \text{if } y = 0 
+\end{cases}
+$$
 
 $$
-P(y|\theta, x) = (\frac{1}{1 + e^-\theta^Tx})^y*(1-\frac{1}{1 + e^-\theta^Tx})^{1-y}
+P(y|\theta, x) = \left(\frac{1}{1 + e^{-\theta^Tx}}\right)^y \cdot \left(1 - \frac{1}{1 + e^{-\theta^Tx}}\right)^{1-y}
 $$
 
 
@@ -234,9 +233,15 @@ The methodology of the decision trees involves recursive partitioning of the dat
 
 We applied the decision trees on our dataset under 4 scenarios, first where all data were categorical, next, we evaluated it on standardized numerical data, normalized numerical data, and lastly on numerical data with PCA.
 
-$$ P_i = \frac{\text{\#income above 50k}   \text { or } \text{income below 50k}}{\text{Subnotes}}$$
-$$Entropy = \sum_{i= 1}^n -p(C_i)log_2(p(C_i)) \\ $$
-$$\text{where} \space p(C_i)\space \text{is the probability of class} \space C_i \text{in a node i} $$
+$$
+P_i = \frac{\text{\#income above 50k or income below 50k}}{\text{Subnotes}}
+$$
+$$
+\text{Entropy} = \sum_{i=1}^n -p(C_i) \log_2(p(C_i))
+$$
+$$
+\text{where } p(C_i) \text{ is the probability of class } C_i \text{ in a node } i
+$$
 
 **[Entropy](https://towardsdatascience.com/decision-trees-explained-entropy-information-gain-gini-index-ccp-pruning-4d78070db36c#:~:text=In%20the%20context%20of%20Decision,only%20pass%20or%20only%20fail.)** denotes the uncertainty of the data, it measures the impurity in a node. When a node contains various classes, it will have a higher entropy than a node that has only one class (PURE). Entropy has a range from 0 to 1. 
 
