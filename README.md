@@ -12,7 +12,6 @@ Our dataset contains various features such as age, education level, occupation, 
 Dataset Source: https://archive.ics.uci.edu/ml/datasets/adult
 Dataset Details:
 This dataset has 48842 instances and 14 attributes, including categorical and integer attributes.
-<img width="744" alt="image" src="https://github.com/user-attachments/assets/42611cb9-3b94-46ee-9753-c94ef7966efd">
 
 **2.1. Feature Description**
 
@@ -33,4 +32,9 @@ This dataset has 48842 instances and 14 attributes, including categorical and in
 |Hours per week|	Numeric|	Working hours per week| -|		
 |Native country|	String|	Country at birth	|1.75%|	
 
- 
+**2.2. Data Overview**
+![image_1](images/image_1.png)
+
+**3. Workflow**
+
+![image_2](images/image_2.png) 
