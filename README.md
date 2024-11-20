@@ -33,8 +33,26 @@ This dataset has 48842 instances and 14 attributes, including categorical and in
 |Native country|	String|	Country at birth	|1.75%|	
 
 **2.2. Data Overview**
-![image_1](images/image_1.png)
+
+![Image_1](Images/image_1.png)
 
 **3. Workflow**
 
-![image_2](images/image_2.png) 
+![Image_2](Images/image_2.png) 
+
+**4. Exploratory Data Analysis(EDA)</a>**
+
+Before implementing any models, we performed EDA on our Training Dataset. This process helps us to understand our dataset better. Statistical insights include the correlation between features, how the data is spread among the mean values, what hypothesis we can make based on the statistical information, which model would better fit, etc.
+
+**4.1. Statistical Summary of Numerical Features**
+
+![Image_3](Images/image_3.png)
+
+**Initial Observations:** 
+1. The average age of the working classes is 38, and the average year of education is 10 years.
+2. 90% of the people did not have capital gain or loss in the early 90s
+3. The average of hours worked per week is 40.       
+
+**4.2. Target Class**
+
+![Image_4](Images/image_4.png)
