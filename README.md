@@ -12,4 +12,25 @@ Our dataset contains various features such as age, education level, occupation, 
 Dataset Source: https://archive.ics.uci.edu/ml/datasets/adult
 Dataset Details:
 This dataset has 48842 instances and 14 attributes, including categorical and integer attributes.
+<img width="744" alt="image" src="https://github.com/user-attachments/assets/42611cb9-3b94-46ee-9753-c94ef7966efd">
+
+**2.1. Feature Description**
+
+|Feature Name|	Data Type|	Description of Variable|Percentage of Missing Values|
+|:---:|:---:|:---:|:---:|
+|Age|Numeric|The age of the individual| -|
+|WorkClass|	String|	Simplified employment status of an individual|	5.73%|
+|fnlgwt|Numeric|Final weight of the record. Basically interpret as the number of people represented by this row| -|
+|Education|	String|	The education level|	-	|
+|Education Num|	Numeric|The education level is ascending positive integer value|- |
+|Martial Status|	String|	Martial status of a person| -|		
+|Occupation	|String	|Category of the occupation	|5.75%|	
+|Relationship|	String|	Relationship in terms of family| -|		
+|Race|	String|	Race of the person|		-|
+|Sex|	String|	Gender at birth| -|
+|Capital Gain|	Numeric|	Dollar gain of capital|- |		
+|Capital loss|	Numeric|	Dollar loss of capital| -|		
+|Hours per week|	Numeric|	Working hours per week| -|		
+|Native country|	String|	Country at birth	|1.75%|	
+
  
